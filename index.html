@@ -9,6 +9,7 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script defer src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   <title>Formulário</title>
 </head>
 
@@ -19,39 +20,31 @@
     <form action="#tabela-detalhes" method="post" id="form">
       <div class="row">
         <div class="col">
-          <label for="">Name: </label>
+          <label for="">Name </label><label class="required">*</label>
           <input type="text" class="form-control" id="nome" required>
         </div>
         <div class="col">
-          <label for="">Sobrenome: </label>
+          <label for="">Sobrenome </label><label class="required">*</label>
           <input type="text" class="form-control" id="sobrenome" required>
         </div>
       </div>
 
       <div class="row">
         <div class="col">
-          <label for="">Email: </label>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <input class="form-control" type="text" name="" id="email" required>
-            </div>
-            <select class="custom-select" id="inputGroupSelect01">
-              <option selected>@gmail.com</option>
-              <option value="1">@outlook.com</option>
-              <option value="2">@hotmail.com</option>
-              <option value="3">@ufn.edu.br</option>
-            </select>
+          <div class="form-group">
+            <label for="">Email </label><label class="required">*</label>
+            <input class="form-control" type="email" name="" id="email" required>
           </div>
         </div>
         <div class="col">
           <div class="form-group">
-            <label>Login:</label>
+            <label>Login</label>
             <input class="form-control" type="text" required name="login" id="login" disabled>
           </div>
         </div>
         <div class="col">
           <div class="form-group">
-            <label>Senha: </label>
+            <label>Senha: </label><label class="required">*</label>
             <input required type="password" class="form-control" id="senha">
           </div>
         </div>
@@ -60,80 +53,75 @@
       <div class="row">
         <div class="col">
           <div class="form-group">
-            <label>CEP: </label>
-            <div class="input-group mb-3">
-              <input id="cep" type="text" class="form-control" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-dark" type="button">Buscar</button>
-              </div>
-            </div>
+            <label>CEP </label><label class="required">*</label>           
+            <input id="cep" required type="text" class="form-control" aria-describedby="basic-addon2">
           </div>          
         </div>
 
         <div class="col">
           <div class="form-group">
-            <label>Cidade: </label>
-            <input class="form-control" type="text" name="cidade" id="cidade"><br>
+            <label>Cidade </label>
+            <input class="form-control" type="text" name="cidade" id="cidade" disabled><br>
           </div>
         </div>
         <div class="col">
           <div class="form-group">
-            <label>Estado: </label>
-            <input class="form-control" type="text" name="estado" id="estado"><br>
+            <label>Estado </label>
+            <input class="form-control" type="text" name="estado" id="estado" disabled><br>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="form-group">
-          <label>Endereço: </label>
-          <input class="form-control" type="text" name="endereco" id="endereco"><br>
+          <label>Endereço </label><label class="required">*</label>
+          <input class="form-control" type="text" name="endereco" id="endereco" required><br>
         </div>
       </div>
 
       <div class="row">
         <div class="col">
           <div class="form-group">
-            <label>Complemento: </label>
+            <label>Complemento </label>
             <input class="form-control" type="text" name="complemeto" id="complemento"><br>
           </div>
         </div>
         <div class="col">
           <div class="form-group">
-            <label>Bairro: </label>
-            <input class="form-control" type="text" name="bairro" id="bairro"><br>
+            <label>Bairro </label><label class="required">*</label>
+            <input class="form-control" type="text" name="bairro" id="bairro" required><br>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col">
-          <label for="basic-url">Seu Perfil do GitHub: </label>
+          <label for="basic-url">Seu Perfil do GitHub </label><label class="required">*</label>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon3">github.com/</span>
             </div>
-            <input type="text" required class="form-control" id="basic-url github" aria-describedby="basic-addon3">
+            <input type="text" required class="form-control" id="github" aria-describedby="basic-addon3">
           </div>
         </div>
         <div class="col">
-          <label>Academia: </label>
+          <label>Academia </label><label class="required">*</label>
           <div class="input-group mb-3 form-group">
             <select required class="custom-select form-control" id="academia">
-              <option selected disabled>Escolha...</option>
-              <option value="java">Academia Java</option>
-              <option value="dotnet">Academia .NET</option>
+              <option selected disabled value="">Escolha...</option>
+              <option value="1">Academia Java</option>
+              <option value="2">Academia .NET</option>
             </select>
           </div>
         </div>
         <div class="col">
-          <label>Professor: </label>
+          <label>Professor </label><label class="required">*</label>
           <div class="input-group mb-3 form-group">
             <select required class="custom-select form-control" id="professor">
-              <option selected disabled>Escolha...</option>
-              <option value="alex">Alexandre Zamberlan</option>
-              <option value="deivison">Deivison Pasa</option>
-              <option value="ricardo">Ricardo Frohlich</option>
+              <option selected disabled value="">Escolha...</option>
+              <option value="1">Alexandre Zamberlan</option>
+              <option value="2">Deivison Pasa</option>
+              <option value="3">Ricardo Frohlich</option>
             </select>
           </div>
         </div>
@@ -154,23 +142,24 @@
         </textarea>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" required>
+        <input class="form-check-input" type="radio" name="exampleRadios" id="termos" value="Sim" required>
         <label class="form-check-label" for="exampleRadios1">
           Eu concordo com os termos acima
-        </label>
-      </div>
+        </label><label class="required">*</label>
+      </div><br>
 
       <label>Você deseja receber novidades por e-mail?</label> <br>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <input class="form-check-input" type="radio" name="informes" id="informes" value="Sim">
         <label class="form-check-label" for="inlineRadio1">Sim</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Não">
         <label class="form-check-label" for="inlineRadio2">Não</label><br>
       </div><br><br>
 
       <input type="submit" class="btn btn-dark btn-lg" value="Cadastrar">
+      <input type="reset" class="btn btn-dark btn-lg" value="Limpar">
     </form><br><br>
 
     <table id="tabela-detalhes" class="d-none">
@@ -254,6 +243,18 @@
         <th>Professor:</th>
         <td>
           <input type="text" class="form-control" id="professort" disabled>
+        </td>
+      </tr>
+      <tr>
+        <th>Termos:</th>
+        <td>
+          <input type="text" class="form-control" id="termost" disabled>
+        </td>
+      </tr>
+      <tr>
+        <th>Informes no email:</th>
+        <td>
+          <input type="text" class="form-control" id="informest" disabled>
         </td>
       </tr>
     </table>
